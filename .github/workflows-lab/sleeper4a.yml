@@ -1,0 +1,16 @@
+name: Sleeper 4a
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sleep:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Runs a set of commands using the runners shell
+      - name: Sleep for a while
+        run: |
+          echo Going to Sleep @ `date -u -Iseconds`
+          sleep 300s
+          echo Waking up .... @ `date -u -Iseconds`
